@@ -96,7 +96,7 @@ public class Car {
 
 	public final double getCentripetalForce() {
 		double value = Math.abs(v * v / radius);
-		return value == java.lang.Double.POSITIVE_INFINITY ? 0 : value;
+		return value == Double.POSITIVE_INFINITY || Double.isNaN(value) ? 0 : value;
 	}
 
 	@Override
